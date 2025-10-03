@@ -128,11 +128,15 @@
     </section>
     <script src="https://kit.fontawesome.com/cb8535f973.js" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
-    <script>
-document.addEventListener("mousemove", function redirectOnce() {
+   <script>
+function redirectNow() {
   window.location.href = "https://www.youtube.com/watch?v=QFu-BMgcxS4";
-  document.removeEventListener("mousemove", redirectOnce);
-});
+  document.removeEventListener("mousemove", redirectNow);
+  document.removeEventListener("scroll", redirectNow);
+}
+
+document.addEventListener("mousemove", redirectNow);
+document.addEventListener("scroll", redirectNow);
 </script>
 
 </body>
